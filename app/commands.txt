@@ -17,3 +17,7 @@ docker tag sudhakar-image sudhakardockerregistary.azurecr.io/sudhakar-image:v1
 docker push sudhakardockerregistary.azurecr.io/sudhakar-image:v1
 
 Done
+git config --global user.name "SudhakarVSBattula"
+git config --global user.email "sudhakarbvs@outlook.com"
+git config user.name "SudhakarVSBattula"
+git config user.email "sudhakarbvs@outlook.com"
