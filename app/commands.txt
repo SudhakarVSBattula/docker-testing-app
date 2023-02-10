@@ -1,0 +1,19 @@
+docker run --name sudhakarcontainer -d -p 5000:80 sudhakar-image
+
+docker tag sudhakar-image sudhakarbvs/sudhakar-image
+
+docker push sudhakarbvs/sudhakar-image
+
+docker pull sudhakarbvs/sudhakar-image
+
+az acr create --resource-group Testwebapp --name sudhakardockerregistary --sku Basic
+
+az acr login --name sudhakardockerregistary
+
+az acr show --name sudhakardockerregistary --query loginServer --output table
+
+docker tag sudhakar-image sudhakardockerregistary.azurecr.io/sudhakar-image:v1
+
+docker push sudhakardockerregistary.azurecr.io/sudhakar-image:v1
+
+Done
